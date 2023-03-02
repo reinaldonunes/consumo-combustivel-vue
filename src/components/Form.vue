@@ -10,6 +10,25 @@
           price: null,
         }
       }
+    },
+    
+    methods: {
+      validateForm(){
+        if(!this.form.distance){
+          alert("Preencha o campo Distância total!")
+          return
+        }
+        if (!this.form.media) {
+          alert("Preencha o campo Média do veículo!")
+          return
+        }
+        if (!this.form.price) {
+          alert("Preencha o campo Preço do combustível!")
+          return
+        }
+    
+        this.$emit('calculateCosts', this.form)
+      }
     }
   })
 </script>
@@ -56,7 +75,7 @@
           <button
             type="button"
             class="btn btn-primary fw-bold w-100 py-3 px-5"
-            @click="$emit('calculateCosts', form)"
+            @click="validateForm"
           >GERAR RESULTADOS</button>
         </div>
         
