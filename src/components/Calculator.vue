@@ -37,9 +37,9 @@
         this.view.form = false
         this.view.loading = true
 
-        let pricePerKm = data.price / data.media
-        let totalCost = pricePerKm * data.distance
-        let liters = totalCost / data.price
+        this.result.priceKm = data.price / data.media
+        this.result.totalCalc = this.result.priceKm * data.distance
+        this.result.litersCar= this.result.totalCalc / data.price
 
         setTimeout(() => {
           this.view.loading = false
