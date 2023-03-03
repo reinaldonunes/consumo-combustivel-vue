@@ -4,6 +4,12 @@
   export default defineComponent({
     props: {
       result: Object
+    },
+
+    methods:{
+      returnStage(){
+        this.$emit('resetSteps')
+      }
     }
   })
 </script>
@@ -20,6 +26,8 @@
       <span class="h4 text-custom-green text-center">R$ {{  result?.totalCalc }}</span>
       <span class="h6 text-custom-violet text-center">ou {{ result?.litersCar }} litro(s).</span>
     </div>
+
+    <button @click="returnStage()">Refazer cálculos</button>
   </div>
 </template>
 
