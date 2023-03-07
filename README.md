@@ -1,7 +1,7 @@
 <h1 align="center"> Cálculo de Consumo de Combustível - v. 2.0 </h1>
 
 <p align="center">
-  Recriação do projeto [Fuel Calc Js](https://github.com/reinaldonunes/fuel-calc-js) utilizando Vue.js + TypeScript.
+  Recriação do projeto <a href="https://github.com/reinaldonunes/fuel-calc-js">Fuel Calc Js</a> utilizando Vue.js + TypeScript.
 </p>
 
 <br>
