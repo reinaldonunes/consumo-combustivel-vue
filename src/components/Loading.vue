@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="text-center">
+  <div class="text-center w-100 p-5">
     <span class="lead text-secondary m-auto d-block text-center mb-3">Aguarde, efetuando cálculo.</span>
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>

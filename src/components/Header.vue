@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <header class="container-fluid py-5 px-2">
+  <header class="container-fluid py-1 px-2">
     <div class="container text-center text-white py-5">
       <h1 class="fw-bold text-custom-green">CONSUMO DE COMBUSTÍVEL</h1>
       <span class="lead">Calcule quanto custará a sua viagem ou deslocamento por quilometragem.</span>
@@ -12,6 +12,7 @@
 
 <style scoped>
 .text-custom-green {
+  font-size:4rem;
   color: #25d88d;
 }
 </style>

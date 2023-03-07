@@ -35,7 +35,7 @@
 
 <template>
   <Transition >
-    <form>
+    <form class="w-100 p-5">
       <div class="mb-4">
         <label
           form="distance" 
@@ -98,5 +98,14 @@
     border-bottom-width: 1px;
     border-bottom: 4px solid #03bd70;
     background: #119f64;
+  }
+  .form-control{
+    background:none;
+    border-color: #666;
+    color: #fff;
+  }
+
+  .form-control::placeholder{
+    color: #999;
   }
 </style>

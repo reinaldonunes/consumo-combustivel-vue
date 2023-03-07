@@ -24,6 +24,7 @@
         },
 
         result: {
+          active: false,
           priceKm: 0,
           totalCalc: 0,
           litersCar: 0
@@ -33,19 +34,15 @@
     methods: {
       calculateCosts(data: DataOptions){
         this.view.stage++
-
-        this.result.priceKm = data.price / data.media
-        this.result.totalCalc = this.result.priceKm * data.distance
-        this.result.litersCar= this.result.totalCalc / data.price
-
+        
         setTimeout(() => {
-          this.view.stage++
+          this.result.priceKm = data.price / data.media
+          this.result.totalCalc = this.result.priceKm * data.distance
+          this.result.litersCar = this.result.totalCalc / data.price
+          this.result.active = true
+          
+          this.view.stage = 0
         }, 1000);
-       
-      },
-
-      resetSteps(){
-        this.view.stage = 0
       }
     }
   })
@@ -53,12 +50,14 @@
 </script>
 
 <template>
-  <div class="container px-5">
-    <div class="row">
-      <div class=" col-9 m-auto bg-custom-violet p-5 rounded-4">
+  <div class="container">
+    <div class="row rounded-4 bg-custom-violet justify-content-between">
+      <div class="col-6 d-flex align-items-center">
         <FormOptions @calculateCosts="calculateCosts" v-if="view.stage === 0" />
         <LoadingProgress v-if="view.stage === 1" />
-        <ResultView :result="result" v-if="view.stage === 2" @resetSteps="resetSteps" />
+      </div>
+      <div class="col-6">
+        <ResultView :result="result"/>
       </div>
     </div>
   </div>

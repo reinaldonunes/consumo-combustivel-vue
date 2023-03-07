@@ -8,7 +8,7 @@
   <HeaderView v-once />
   <CalculatorView />
   <FooterView
-    copyright="&copy; 2023 Consumo de combustível por quilometragem - Feito por Reinaldo J.Nunes"
+    copyright="&copy; 2023 Consumo de combustível por quilometragem - Feito por Reinaldo J. Nunes"
     v-once 
   />
 </template>
